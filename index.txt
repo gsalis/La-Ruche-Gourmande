@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Ruche Gourmande</title>
+  <meta name="description" content="Miel local, naturel et délicieux. Commandez facilement et découvrez les bienfaits de l’apiculture responsable avec La Ruche Gourmande. Livraison dans un rayon de 20 km.">
+  <meta name="keywords" content="miel, apiculture, ruche gourmande, producteur, local, naturel, commande, vidéo scientifique, FNOSAD, UNAF, GDSA">
+  <meta name="author" content="La Ruche Gourmande">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🐝 La Ruche Gourmande</h1>
+    <nav>
+      <a href="#presentation">Présentation</a>
+      <a href="#produits">Produits</a>
+      <a href="#commande">Commande</a>
+      <a href="#actualites">Actualités</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="presentation">
+      <h2>Présentation</h2>
+      <p>Bienvenue à La Ruche Gourmande, apiculteur passionné situé en Lorraine. Nous produisons un miel local, naturel et respectueux des abeilles.</p>
+    </section>
+
+    <section id="produits">
+      <h2>Nos Produits</h2>
+      <ul>
+        <li>Miel de fleurs - 8 €/pot de 500g</li>
+        <li>Miel de forêt - 9 €/pot de 500g</li>
+        <li>Miel crémeux - 8,50 €/pot de 500g</li>
+      </ul>
+      <p>Livraison dans un rayon de 20 km autour de Creutzwald.</p>
+    </section>
+
+    <section id="commande">
+      <h2>Passer commande</h2>
+      <p>Pour commander, envoyez-nous un message avec les produits souhaités. Paiement
+
