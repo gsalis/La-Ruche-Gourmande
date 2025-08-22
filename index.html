@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>La Ruche Gourmande - Accueil</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background:#fff8e1;
+    color:#5a3e1b;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+  }
+
+  /* Images décoratives fixes */
+  .side-image {
+    position: fixed;
+    top:0;
+    width:30%;
+    height:100vh;
+    object-fit:cover;
+    z-index:-1;
+    opacity:0.7;
+    filter:blur(1px);
+  }
+  .left-img{left:0;}
+  .right-img{right:0;}
+
+  /* Header & Navigation */
+  header {
+    background-color:#f4b41a;
+    padding:20px 10px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+  }
+  header h1 {
+    font-size:2.5rem;
+    font-weight:900;
+    color:white;
+    text-shadow:1px 1px 3px rgba(0,0,0,0.3);
+    margin:0;
+  }
+  nav {
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+  }
+  nav a {
+    color:white;
+    margin:0 8px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.1rem;
+    padding:10px 20px;
+    border-radius:8px;
+    transition:background-color 0.3s, transform 0.2s;
+  }
+  nav a:hover {
+    background-color:rgba(0,0,0,0.2);
+    transform:scale(1.05);
+  }
+  nav a:last-child {
+    background-color:#e67e22;
+    font-weight:900;
+  }
+  nav a:last-child:hover {background-color:#cf6b19;}
+
+  /* Contenu central */
+  main {
+    max-width:900px;
+    margin:40px auto;
+    padding:40px 20px;
+    text-align:center;
+    background:rgba(255,255,255,0.95);
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.1);
+    position:relative;
+    z-index:1;
+    flex:1;
+  }
+
+  h2 {font-size:2rem; margin-bottom:20px; color:#f4b41a;}
+  p {font-size:1.15rem; margin-bottom:20px; line-height:1.6;}
+  ul {text-align:left; max-width:700px; margin:0 auto; font-size:1.2rem; line-height:1.6;}
+
+  .btn-contact {
+    display:inline-block;
+    background-color:#5a3e1b;
+    color:white;
+    padding:12px 25px;
+    font-weight:bold;
+    border-radius:8px;
+    text-decoration:none;
+    transition:background-color 0.3s, transform 0.2s;
+  }
+  .btn-contact:hover {
+    background-color:#433017;
+    transform:translateY(-2px);
+  }
+  .btn-contact.orange {background-color:#e67e22;}
+  .btn-contact.orange:hover {background-color:#cf6b19;}
+
+  footer {
+    text-align:center;
+    padding:15px;
+    background-color:#f4b41a;
+    color:white;
+    font-weight:600;
+    margin-top:40px;
+    position:relative;
+    z-index:1;
+  }
+
+  /* Responsive */
+  @media (max-width:1024px){.side-image{width:25%;}}
+  @media (max-width:768px){
+    .side-image{display:none;}
+    main{max-width:95%; padding:30px 15px;}
+    nav a{font-size:1rem;}
+    header h1{font-size:2rem;}
+  }
+  @media (max-width:480px){
+    main{padding:20px 10px;}
+    nav a{padding:8px 15px; font-size:0.9rem;}
+    header h1{font-size:1.6rem;}
+    h2{font-size:1.5rem;}
+    p, ul{font-size:1rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Images décoratives -->
+<img src="1-abeille-sur-fleur.jpg" alt="Abeille" class="side-image left-img">
+<img src="2-honey-1958464_1280.jpg" alt="Pot de miel" class="side-image right-img">
+
+<header>
+  <h1>La Ruche Gourmande</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Nos Miels</a>
+    <a href="actualité.html">Actualités</a>
+    <a href="video.html">Vidéos</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBHSzUK_M2JtTlJkbAQOOFdy8JptIoCYOpzPF7Ac3SPIb7Ag/viewform?usp=header" target="_blank" rel="noopener" class="btn-contact orange">Commander</a>
+  </nav>
+</header>
+
+<main>
+<h2>Bienvenue sur le site de La Ruche Gourmande</h2>
+<p><strong>Un miel local, des abeilles heureuses, et un projet engagé pour préserver la biodiversité.</strong></p>
+<p>Notre rucher se situe au cœur du Pays Haut, là où la minette a jadis façonné le paysage, la nature ayant repris ses droits. Nos abeilles butinent dans ce havre de verdure pour vous offrir un miel riche en saveurs, 100 % naturel. Goûtez le goût authentique de notre territoire retrouvé ! .Ici, entre champs fleuris, vergers et prairies, la nature conserve toute sa richesse et sa diversité.</p>
+<p>Chaque fleur butinée par nos abeilles contribue à un équilibre fragile et magnifique. Chaque saison apporte son parfum unique, chaque nectar révèle son goût d’exception.</p>
+<p>Chaque pot de miel raconte l’histoire de notre territoire : la douceur du printemps, la chaleur de l’été, l’authenticité des saveurs locales. Nos abeilles travaillent dans un environnement sain et riche en biodiversité, où fleurs sauvages, vergers et prairies se mêlent pour créer des miels uniques et délicieux.</p>
+<p>En choisissant La Ruche Gourmande, vous soutenez l’économie locale et participez à la protection de cet environnement exceptionnel :</p>
+<ul>
+<li>🌱 Vous contribuez <strong>à préserver la biodiversité</strong> du Pays Haut,</li>
+<li>🐝 Vous vous impliquez dans des projets locaux <strong>en parrainant une ruche</strong> et en suivant son évolution tout au long de l’année,</li>
+<li>🎓 Vous permettez à notre apiculteur de développer <strong>des projets éducatifs</strong> pour les enfants et les lycées hôteliers, afin de leur faire découvrir l’origine et la transformation artisanale du miel.</li>
+</ul>
+<p>Envie de devenir acteur de cette belle aventure et de goûter la richesse du Pays Haut ?<br>Contactez-nous pour parrainer une ruche ou commandez nos miels artisanaux.</p>
+<div style="margin-top:20px; display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+  <a href="contact.html" class="btn-contact">Parrainer une ruche ou nous écrire</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBHSzUK_M2JtTlJkbAQOOFdy8JptIoCYOpzPF7Ac3SPIb7Ag/viewform?usp=header" target="_blank" rel="noopener" class="btn-contact orange">Commander du miel</a>
+</div>
+</main>
+
+<footer>
+  &copy; 2025 La Ruche Gourmande - Tous droits réservés
+</footer>
+
+</body>
+</html>
