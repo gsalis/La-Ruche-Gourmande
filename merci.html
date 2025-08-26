@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merci – La Ruche Gourmande</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background: #fff8e1;
+    color: #5a3e1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    background: rgba(255,255,255,0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #f4b41a;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .btn-home {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #5a3e1b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .btn-home:hover {
+    background-color: #433017;
+  }
+
+  .bee-img {
+    width: 250px;  /* plus grande */
+    max-height: 250px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    object-fit: cover;
+  }
+
+  @media (max-width:480px){
+    .container { padding: 25px 15px; }
+    h1 { font-size: 1.6rem; }
+    p { font-size: 1rem; }
+    .bee-img { width: 150px; max-height: 150px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <img src="9-moi-au-rucher.jpg" alt="Apiculteur au rucher" class="bee-img">
+    <h1>Merci pour votre message !</h1>
+    <p>Nous avons bien reçu votre demande et y répondrons dans les meilleurs délais.  
+       Votre soutien à l’apiculture locale est précieux !</p>
+    <a href="index.html" class="btn-home">Retour à l'accueil</a>
+  </div>
+</body>
+</html>
+
