@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>La Ruche Gourmande - Contact</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background:#fff8e1;
+    color:#5a3e1b;
+  }
+  header {
+    background-color:#f4b41a;
+    padding:20px 10px;
+    text-align:center;
+  }
+  header h1 {
+    font-size:2.5rem;
+    font-weight:900;
+    color:white;
+    text-shadow:1px 1px 3px rgba(0,0,0,0.3);
+    margin:0;
+  }
+  nav {
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+  }
+  nav a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.1rem;
+    padding:10px 20px;
+    border-radius:8px;
+    transition:0.3s;
+  }
+  nav a:hover { background-color:rgba(0,0,0,0.2); transform:scale(1.05); }
+  nav a:last-child { background-color:#e67e22; font-weight:900; }
+  nav a:last-child:hover { background-color:#cf6b19; }
+
+  main {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:20px;
+  }
+  .side-img {
+    flex:1;
+    text-align:center;
+  }
+  .side-img img {
+    max-width:90%;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    margin-bottom:15px;
+  }
+  .content {
+    flex:2;
+    margin:0 20px;
+  }
+  .content h2 { color:#f4b41a; margin-bottom:15px; }
+  .content p { line-height:1.6; margin-bottom:15px; }
+  form {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:20px;
+  }
+  label { font-weight:bold; }
+  input, textarea, button {
+    padding:10px;
+    font-size:1em;
+    border:1px solid #ccc;
+    border-radius:5px;
+  }
+  button {
+    background-color:#5a3e1b;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+  }
+  button:hover { background-color:#433017; }
+  .email-button {
+    display:inline-block;
+    padding:12px 25px;
+    background-color:#e67e22;
+    color:white;
+    font-weight:bold;
+    border-radius:8px;
+    text-decoration:none;
+    cursor:pointer;
+    margin-top:10px;
+    transition:0.3s;
+  }
+  .email-button:hover { background-color:#cf6b19; }
+
+  footer {
+    background-color:#f4b41a;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+    font-weight:600;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>La Ruche Gourmande</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="produits.html">Nos Miels</a>
+      <a href="actualité.html">Actualités</a>
+      <a href="video.html">Vidéos</a>
+      <a href="contact.html">Contact</a>
+      <a href="produits.html" class="btn-contact">Commander</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="side-img">
+      <img src="9-moi-au-rucher.jpg" alt="Apiculteur au rucher">
+      <img src="14-ruche.jpg" alt="Ruche au soleil">
+    </div>
+
+    <div class="content">
+      <h2>Nous écrire / Commander du miel</h2>
+      <p>Vous souhaitez en savoir plus ou commander du miel ?  
+         Remplissez le formulaire ci-dessous, nous vous répondrons rapidement.</p>
+      <form action="https://formsubmit.co/contact@mielvillerupt.fr" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nouveau message via la page Contact">
+        <input type="hidden" name="_next" value="https://www.mielvillerupt.fr/merci.html">
+
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <h2>Autres moyens de contact</h2>
+      <p><strong>Email :</strong></p>
+      <a href="mailto:contact@mielvillerupt.fr" class="email-button">Envoyer un email</a>
+      <p><strong>Téléphone :</strong> <a href="tel:+33622721071">06 22 72 10 71</a></p>
+      <p><strong>Adresse :</strong> 3 rue Maximilien de Robespierre, 54190 Villerupt</p>
+    </div>
+
+    <div class="side-img">
+      <img src="11-cadre-miel.jpg" alt="Cadre de miel">
+      <img src="6-miel d'été 2.jpg" alt="Pot de miel">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 La Ruche Gourmande - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
