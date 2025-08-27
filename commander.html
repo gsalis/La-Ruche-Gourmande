@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panier - La Ruche Gourmande</title>
+<style>
+  body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fff8e1; color:#333; padding:20px;}
+  h1{color:#f4b41a;}
+  table{width:100%; border-collapse:collapse; margin-top:20px;}
+  th, td{border:1px solid #ccc; padding:10px; text-align:center;}
+  th{background:#f4b41a; color:white;}
+  tfoot td{font-weight:bold;}
+  .btn{padding:10px 20px; margin-top:15px; border:none; border-radius:6px; cursor:pointer; color:white; font-weight:bold;}
+  .btn-clear{background:#e74c3c;}
+  .btn-checkout{background:#27ae60;}
+</style>
+</head>
+<body>
+
+<h1>Votre Panier</h1>
+
+<table id="cartTable">
+  <thead>
+    <tr>
+      <th>Produit</th>
+      <th>Format</th>
+      <th>Quantité</th>
+      <th>Prix unitaire</th>
+      <th>Total</th>
+      <th>Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Les lignes seront ajoutées par JS -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Total général</td>
+      <td id="grandTotal">0€</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<button class="btn btn-clear" id="clearCart">Vider le panier</button>
+<button class="btn btn-checkout" id="checkout">Passer commande</button>
+
+<script>
+function loadCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const tbody = document.querySelector('#cartTable tbody');
+  tbody.innerHTML = '';
+  let grandTotal = 0;
+
+  cart.forEach((item, index) => {
+    const total = item.qty * item.price;
+    grandTotal += total;
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.size} g</td>
+      <td>${item.qty}</td>
+      <td>${item.price}€</td>
+      <td>${total}€</td>
+      <td><button onclick="removeItem(${index})">❌</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('grandTotal').textContent = grandTotal + '€';
+}
+
+// Supprimer un article
+function removeItem(index) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCart();
+}
+
+// Vider tout le panier
+document.getElementById('clearCart').addEventListener('click', ()=>{
+  localStorage.removeItem('cart');
+  loadCart();
+});
+
+// Passer commande (ex: redirection vers formulaire paiement)
+document.getElementById('checkout').addEventListener('click', ()=>{
+  alert('Vous serez redirigé vers le paiement !');
+  // Ici tu peux mettre window.location.href = 'paiement.html';
+});
+
+loadCart();
+</script>
+
+</body>
+</html>
