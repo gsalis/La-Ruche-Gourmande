@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commander - La Ruche Gourmande</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<style>
+body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fff8e1; color:#333; padding:20px; margin-bottom:60px;}
+h1{color:#f4b41a;}
+table{width:100%; border-collapse:collapse; margin-top:20px;}
+th, td{border:1px solid #ccc; padding:10px; text-align:center;}
+th{background:#f4b41a; color:white;}
+tfoot td{font-weight:bold;}
+.btn{padding:10px 20px; margin-top:15px; border:none; border-radius:6px; cursor:pointer; color:white; font-weight:bold;}
+.btn-clear{background:#e74c3c;}
+.btn-checkout{background:#27ae60;}
+form{margin-top:30px; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+input, textarea, select{width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;}
+#message{margin-top:20px; font-weight:bold; font-size:1.1rem; color:green;}
+#map{width:100%; height:350px; margin-top:20px; border-radius:12px;}
+#backBtn{position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background:#f4b41a; color:white; padding:12px 25px; border-radius:8px; font-weight:bold; text-decoration:none; z-index:1000;}
+</style>
+</head>
+<body>
+
+<h1>Votre Panier</h1>
+
+<table id="cartTable">
+  <thead>
+    <tr>
+      <th>Produit</th>
+      <th>Format</th>
+      <th>Quantité</th>
+      <th>Prix unitaire</th>
+      <th>Total</th>
+      <th>Supprimer</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Total général</td>
+      <td id="grandTotal">0€</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<button class="btn btn-clear" id="clearCart">Vider le panier</button>
+
+<h2>Informations de livraison</h2>
+
+<form id="orderForm" action="https://formspree.io/f/xyzdzwwj" method="POST">
+  <label>Prénom :</label>
+  <input type="text" name="Prénom" id="fname" required>
+  <label>Nom :</label>
+  <input type="text" name="Nom" id="lname" required>
+  <label>Adresse :</label>
+  <input type="text" name="Adresse" id="address" placeholder="Rue, Code Postal, Ville" required>
+  <label>Compléments (optionnel) :</label>
+  <textarea name="Compléments" id="details"></textarea>
+
+  <label>Choisissez votre option :</label>
+  <select name="Option" id="pickupOption" required>
+    <option value="retrait">Je viens chercher ma commande à la Ruche Gourmande</option>
+    <option value="livraison">Livraison gratuite samedi (zone < 15 km)</option>
+  </select>
+
+  <input type="hidden" name="Panier" id="cartData">
+  <button type="submit" class="btn btn-checkout">Passer commande</button>
+</form>
+
+<div id="message"></div>
+<div id="map"></div>
+<a href="index.html" id="backBtn">Retour au site</a>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+// --- Panier ---
+function loadCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const tbody = document.querySelector('#cartTable tbody');
+  tbody.innerHTML = '';
+  let grandTotal = 0;
+  cart.forEach((item, index) => {
+    const total = item.qty * item.price;
+    grandTotal += total;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${item.name}</td><td>${item.size} g</td><td>${item.qty}</td><td>${item.price}€</td><td>${total}€</td><td><button type="button" onclick="removeItem(${index})">❌</button></td>`;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('grandTotal').textContent = grandTotal + '€';
+  document.getElementById('cartData').value = JSON.stringify(cart);
+}
+
+function removeItem(index){
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index,1);
+  localStorage.setItem('cart',JSON.stringify(cart));
+  loadCart();
+}
+
+document.getElementById('clearCart').addEventListener('click', ()=>{
+  localStorage.removeItem('cart');
+  loadCart();
+});
+
+loadCart();
+
+// --- Carte ---
+const rucheCoords = { lat: 49.4604210515537, lon: 5.937996326094758 };
+const maxDistanceKm = 15;
+let map = null;
+
+function initMap() {
+  map = L.map('map').setView([rucheCoords.lat, rucheCoords.lon], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'© OpenStreetMap'}).addTo(map);
+
+  // Cercle de livraison gratuite
+  const deliveryCircle = L.circle([rucheCoords.lat, rucheCoords.lon], {
+    radius: maxDistanceKm*1000,
+    color: 'green',
+    fillColor: 'green',
+    fillOpacity: 0.2
+  }).addTo(map).bindPopup("Zone de livraison gratuite (samedi)").openPopup();
+
+  L.marker([rucheCoords.lat, rucheCoords.lon]).addTo(map).bindPopup('La Ruche Gourmande').openPopup();
+}
+
+function deg2rad(deg){return deg*(Math.PI/180);}
+function getDistance(lat1, lon1, lat2, lon2){
+  const R=6371;
+  const dLat=deg2rad(lat2-lat1);
+  const dLon=deg2rad(lon2-lon1);
+  const a=Math.sin(dLat/2)**2+Math.cos(deg2rad(lat1))*Math.cos(deg2rad(lat2))*Math.sin(dLon/2)**2;
+  const c=2*Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R*c;
+}
+
+initMap();
+
+// --- Formulaire avec géolocalisation par adresse ---
+const form = document.getElementById('orderForm');
+form.addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  const address = document.getElementById('address').value;
+  const fname = document.getElementById('fname').value;
+  const pickupSelect = document.getElementById('pickupOption');
+
+  let userCoords = null;
+  try {
+    const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`);
+    const data = await res.json();
+    if(data.length > 0){
+      userCoords = { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon) };
+      // Ajouter un marqueur sur la carte
+      L.marker([userCoords.lat, userCoords.lon]).addTo(map).bindPopup('Adresse saisie').openPopup();
+    }
+  } catch(err){ console.error(err); }
+
+  // Vérification distance
+  if(userCoords){
+    const distance = getDistance(userCoords.lat, userCoords.lon, rucheCoords.lat, rucheCoords.lon);
+    if(distance <= maxDistanceKm){
+      pickupSelect.value = 'livraison';
+      pickupSelect.querySelector('option[value="livraison"]').disabled = false;
+      document.getElementById('message').innerText = `Vous êtes à ${distance.toFixed(1)} km : livraison gratuite possible samedi !`;
+    } else {
+      pickupSelect.value = 'retrait';
+      pickupSelect.querySelector('option[value="livraison"]').disabled = true;
+      document.getElementById('message').innerText = `Vous êtes à ${distance.toFixed(1)} km : livraison impossible, vous devez venir chercher votre commande.`;
+    }
+  } else {
+    pickupSelect.value = 'retrait';
+    pickupSelect.querySelector('option[value="livraison"]').disabled = true;
+    document.getElementById('message').innerText = "Impossible de déterminer votre position : vous devez venir chercher votre commande à la Ruche Gourmande.";
+  }
+
+  // Envoi Formspree
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if(response.ok){
+      localStorage.removeItem('cart');
+      loadCart();
+      form.reset();
+    } else {
+      document.getElementById('message').innerText = "Erreur lors de l'envoi de la commande.";
+      document.getElementById('message').style.color = 'red';
+    }
+  });
+});
+</script>
+</body>
+</html>
