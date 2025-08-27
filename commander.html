@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panier - La Ruche Gourmande</title>
+<style>
+body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fff8e1; color:#333; padding:20px;}
+h1{color:#f4b41a;}
+table{width:100%; border-collapse:collapse; margin-top:20px;}
+th, td{border:1px solid #ccc; padding:10px; text-align:center;}
+th{background:#f4b41a; color:white;}
+tfoot td{font-weight:bold;}
+.btn{padding:10px 20px; margin-top:15px; border:none; border-radius:6px; cursor:pointer; color:white; font-weight:bold;}
+.btn-clear{background:#e74c3c;}
+.btn-checkout{background:#27ae60;}
+form{margin-top:30px; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+input, textarea, select{width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;}
+#message{margin-top:20px; font-weight:bold; font-size:1.1rem; color:green;}
+</style>
+</head>
+<body>
+
+<h1>Votre Panier</h1>
+
+<table id="cartTable">
+  <thead>
+    <tr>
+      <th>Produit</th>
+      <th>Format</th>
+      <th>Quantité</th>
+      <th>Prix unitaire</th>
+      <th>Total</th>
+      <th>Supprimer</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Total général</td>
+      <td id="grandTotal">0€</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<button class="btn btn-clear" id="clearCart">Vider le panier</button>
+
+<h2>Informations de livraison</h2>
+<form id="orderForm" method="POST">
+  <label>Prénom :</label>
+  <input type="text" name="fname" id="fname" required>
+  <label>Nom :</label>
+  <input type="text" name="lname" id="lname" required>
+  <label>Adresse :</label>
+  <input type="text" name="address" id="address" placeholder="Rue, Code Postal, Ville" required>
+  <label>Compléments (optionnel) :</label>
+  <textarea name="details" id="details"></textarea>
+
+  <label>Choisissez votre option :</label>
+  <select name="pickupOption" id="pickupOption" required>
+    <option value="retrait">Je viens chercher ma commande à la Ruche Gourmande</option>
+    <option value="livraison">Livraison gratuite samedi (zone < 15 km)</option>
+  </select>
+
+  <input type="hidden" name="cartData" id="cartData">
+  <button type="submit" class="btn btn-checkout">Passer commande</button>
+</form>
+
+<div id="message"></div>
+
+<script>
+// --- Panier ---
+function loadCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const tbody = document.querySelector('#cartTable tbody');
+  tbody.innerHTML = '';
+  let grandTotal = 0;
+  cart.forEach((item, index) => {
+    const total = item.qty * item.price;
+    grandTotal += total;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${item.name}</td><td>${item.size} g</td><td>${item.qty}</td><td>${item.price}€</td><td>${total}€</td><td><button type="button" onclick="removeItem(${index})">❌</button></td>`;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('grandTotal').textContent = grandTotal + '€';
+  document.getElementById('cartData').value = JSON.stringify(cart);
+}
+
+function removeItem(index){
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index,1);
+  localStorage.setItem('cart',JSON.stringify(cart));
+  loadCart();
+}
+
+document.getElementById('clearCart').addEventListener('click', ()=>{
+  localStorage.removeItem('cart');
+  loadCart();
+});
+
+loadCart();
+</script>
+
+<?php
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $to = "contact@mielvillerupt.fr";
+    $subject = "Nouvelle commande La Ruche Gourmande";
+
+    $fname = strip_tags($_POST['fname']);
+    $lname = strip_tags($_POST['lname']);
+    $address = strip_tags($_POST['address']);
+    $details = strip_tags($_POST['details']);
+    $cart = strip_tags($_POST['cartData']);
+    $pickup = strip_tags($_POST['pickupOption']);
+    $pickupText = ($pickup==='retrait') ? "Retrait à la Ruche Gourmande" : "Livraison gratuite samedi (zone < 15 km)";
+
+    $message = "Commande de $fname $lname\nAdresse : $address\nCompléments : $details\nPanier : $cart\nOption : $pickupText\n";
+    $headers = "From: contact@mielvillerupt.fr";
+
+    if(mail($to,$subject,$message,$headers)){
+        echo "<div id='message'>Merci $fname ! Votre commande est confirmée.<br>Elle est à disposition à la Ruche Gourmande si vous avez choisi le retrait, ou sera livrée gratuitement samedi si vous êtes dans la zone de 15 km.</div>";
+        echo "<script>localStorage.removeItem('cart'); loadCart(); document.getElementById('orderForm').reset();</script>";
+    }else{
+        echo "<div id='message' style='color:red;'>Erreur lors de l'envoi du mail. Veuillez réessayer.</div>";
+    }
+}
+?>
+</body>
+</html>
