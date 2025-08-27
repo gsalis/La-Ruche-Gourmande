@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panier - La Ruche Gourmande</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box;}
+  body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fff8e1; color:#333; line-height:1.6; min-height:100vh; display:flex; flex-direction:column;}
+  header{background:#f4b41a; padding:20px; text-align:center;}
+  header h1{color:white; font-size:2.5rem; text-shadow:1px 1px 3px rgba(0,0,0,0.3);}
+  nav{margin-top:15px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;}
+  nav a{color:white; text-decoration:none; font-weight:bold; font-size:1.1rem; padding:10px 20px; border-radius:8px; transition:background-color 0.3s;}
+  nav a:hover{background-color:rgba(0,0,0,0.2);}
+  main{max-width:900px; margin:40px auto; padding:40px 20px; background:rgba(255,255,255,0.95); border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.1);}
+  h2{font-size:2rem; margin-bottom:20px; color:#f4b41a; text-align:center;}
+  table{width:100%; border-collapse:collapse; margin-top:20px;}
+  th, td{border:1px solid #ccc; padding:10px; text-align:center;}
+  th{background:#f4b41a; color:white;}
+  tfoot td{font-weight:bold;}
+  .btn{padding:10px 20px; margin-top:15px; border:none; border-radius:6px; cursor:pointer; color:white; font-weight:bold;}
+  .btn-clear{background:#e74c3c;}
+  .btn-checkout{background:#27ae60;}
+  footer{text-align:center; background:#f4b41a; color:white; padding:15px; margin-top:40px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>La Ruche Gourmande</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Nos Miels</a>
+    <a href="actualité.html">Actualités</a>
+    <a href="video.html">Vidéos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+<h2>Votre Panier</h2>
+
+<table id="cartTable">
+  <thead>
+    <tr>
+      <th>Produit</th>
+      <th>Format</th>
+      <th>Quantité</th>
+      <th>Prix unitaire</th>
+      <th>Total</th>
+      <th>Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Les lignes seront ajoutées par JS -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Total général</td>
+      <td id="grandTotal">0€</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<button class="btn btn-clear" id="clearCart">Vider le panier</button>
+<button class="btn btn-checkout" id="checkout">Passer commande</button>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 La Ruche Gourmande - Tous droits réservés</p>
+</footer>
+
+<script>
+function loadCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const tbody = document.querySelector('#cartTable tbody');
+  tbody.innerHTML = '';
+  let grandTotal = 0;
+
+  cart.forEach((item, index) => {
+    const total = item.qty * item.price;
+    grandTotal += total;
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.size} g</td>
+      <td>${item.qty}</td>
+      <td>${item.price}€</td>
+      <td>${total}€</td>
+      <td><button onclick="removeItem(${index})">❌</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('grandTotal').textContent = grandTotal + '€';
+}
+
+// Supprimer un article
+function removeItem(index) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCart();
+}
+
+// Vider tout le panier
+document.getElementById('clearCart').addEventListener('click', ()=>{
+  localStorage.removeItem('cart');
+  loadCart();
+});
+
+// Passer commande
+document.getElementById('checkout').addEventListener('click', ()=>{
+  if((JSON.parse(localStorage.getItem('cart')) || []).length === 0){
+    alert('Votre panier est vide !');
+    return;
+  }
+  alert('Merci ! Votre commande a été validée. Vous serez redirigé vers le paiement.');
+  // Ici tu peux mettre window.location.href = 'paiement.html';
+  localStorage.removeItem('cart');
+  loadCart();
+});
+
+loadCart();
+</script>
+
+</body>
+</html>
