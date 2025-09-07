@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Ruche Gourmande - Nos Miels Artisanaux</title>
+<meta name="description" content="Découvrez les miels artisanaux de La Ruche Gourmande à Villerupt.">
+
+<!-- Font Awesome pour icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-yHk3OeBJoH0bVp5Q5vOZl9M8K4UXJjp5n3Zc+f+NL4JpU+K2tBFrnq+ZpFvcWd8J3R8+1L7HgG3H6W5bIh3F0g==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fff8e1; color:#333; line-height:1.6; min-height:100vh; display:flex; flex-direction:column;}
+.side-image{position:fixed; top:0; width:30%; height:100vh; object-fit:cover; z-index:-1; opacity:0.7; filter:blur(1px);}
+.left-img{left:0;}
+.right-img{right:0;}
+
+/* Header */
+header{background:#f4b41a; padding:15px 20px; text-align:center; position:relative; z-index:1; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:15px;}
+header img.logo{height:60px; width:auto; margin-right:15px;}
+header h1{font-size:2rem; font-weight:900; color:white; text-shadow:1px 1px 3px rgba(0,0,0,0.3);}
+nav{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; align-items:center;}
+nav a{color:white; text-decoration:none; font-weight:bold; font-size:1.1rem; padding:8px 15px; border-radius:8px; transition:background 0.3s, transform 0.2s;}
+nav a:hover{background:rgba(0,0,0,0.2); transform:scale(1.05);}
+.btn-commander.commander{background:#e67e22; color:white; font-weight:bold; border-radius:10px; padding:10px 25px; text-decoration:none; transition:background 0.3s;}
+.btn-commander.commander:hover{background:#cf6b19;}
+.btn-commander.panier{background:#5a3e1b; color:white; font-weight:bold; border-radius:10px; padding:10px 25px; text-decoration:none; position:relative;}
+.btn-commander.panier:hover{background:#433017;}
+.cart-icon{font-size:1.2rem;}
+#cart-badge{background:#e74c3c; color:white; font-size:0.8rem; font-weight:bold; padding:2px 6px; border-radius:50%; position:absolute; top:0; right:0; transform:translate(50%,-50%);}
+
+/* Main content */
+main{max-width:1000px; margin:40px auto; padding:20px; background:rgba(255,255,255,0.95); border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); flex:1;}
+h2{margin-bottom:20px; color:#f4b41a; font-size:2rem; border-bottom:2px solid #f4b41a; padding-bottom:5px;}
+h3{margin-top:20px; color:#d99a15; font-size:1.5rem;}
+p, li{margin-bottom:15px; font-size:1.1rem; color:#333;}
+a.reference-link{color:#f4b41a; text-decoration:none; font-weight:bold;}
+a.reference-link:hover{text-decoration:underline;}
+
+/* Grille des miels */
+.miels-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; justify-items:center; margin-top:30px;}
+.miel-card{background:white; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; text-decoration:none; width:100%; transition:transform 0.3s;}
+.miel-card:hover{transform:translateY(-5px);}
+.miel-card img{width:100%; height:220px; object-fit:cover;}
+.miel-card h3{background:#f4b41a; color:white; text-align:center; padding:12px; font-size:1rem; font-style:italic;}
+
+/* Lightbox */
+.lightbox{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:999; flex-direction:column; padding:20px; overflow:auto;}
+.lightbox img{max-width:60%; max-height:60vh; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.5); margin-bottom:15px;}
+.lightbox .description{color:white; text-align:center; margin-bottom:20px; font-size:1.1rem; max-width:80%;}
+.lightbox .close, .lightbox .prev, .lightbox .next{position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:1.8rem; padding:10px 16px; cursor:pointer; border-radius:50%;}
+.lightbox .close{top:10%; right:5%; transform:none;}
+.lightbox .prev{left:5%;}
+.lightbox .next{right:5%;}
+.lightbox .btn-lightbox{display:inline-block; background:#e67e22; color:white; padding:10px 25px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s; margin-top:10px;}
+.lightbox .btn-lightbox:hover{background:#cf6b19;}
+.lightbox .controls{display:flex; flex-direction:column; gap:10px; align-items:center;}
+.lightbox label{margin-right:5px;}
+
+/* Toast */
+#toast{position:fixed; top:20px; right:20px; background:#27ae60; color:white; padding:15px 25px; border-radius:8px; font-weight:bold; display:none; z-index:1000; opacity:0; transition:opacity 0.5s;}
+
+@media(max-width:1024px){.miels-grid{grid-template-columns:repeat(2,1fr);}.side-image{width:25%;}}
+@media(max-width:768px){.miels-grid{grid-template-columns:1fr;}.miel-card img{height:180px;}.side-image{display:none;}}
+@media(max-width:480px){.miel-card img{height:140px;}}
+</style>
+</head>
+<body>
+
+<img src="1-abeille-sur-fleur.jpg" alt="Abeille" class="side-image left-img" loading="lazy">
+<img src="2-honey-1958464_1280.jpg" alt="Pot de miel" class="side-image right-img" loading="lazy">
+
+<header>
+  <img src="28-LOGO BLANC.png" alt="Logo La Ruche Gourmande" class="logo">
+  <h1>La Ruche Gourmande</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Nos Miels</a>
+    <a href="actualité.html">Actualités</a>
+    <a href="video.html">Vidéos</a>
+    <a href="contact.html">Contact</a>
+    <a href="commander.html" class="btn-commander commander"><i class="fas fa-store"></i> Commander</a>
+    <a href="commander.html" class="btn-commander panier">
+      <span class="cart-icon">🛒</span>
+      <span id="cart-badge">0</span>
+    </a>
+  </nav>
+</header>
+
+<main>
+<h2>Nos Miels Artisanaux</h2>
+<p style="font-style:italic;">« Le miel est un trésor de la nature, doux pour le corps et l’âme. » – Jean-Henri Fabre</p>
+<p><strong>Choisissez votre pot et cliquez sur l'image pour ajouter au panier.</strong></p>
+
+<div class="miels-grid">
+  <a href="#" class="miel-card" data-index="0"><img src="3-miel de printemps 1.jpg" alt="Miel de printemps crémeux" loading="lazy"><h3>Printemps crémeux</h3></a>
+  <a href="#" class="miel-card" data-index="1"><img src="4-miel de printemps 2.jpg" alt="Miel de printemps crémeux" loading="lazy"><h3>Printemps crémeux</h3></a>
+  <a href="#" class="miel-card" data-index="2"><img src="5-miel d'été 1.jpg" alt="Miel d'été liquide" loading="lazy"><h3>Été liquide</h3></a>
+  <a href="#" class="miel-card" data-index="3"><img src="6-miel d'été 2.jpg" alt="Miel d'été liquide" loading="lazy"><h3>Été liquide</h3></a>
+  <a href="#" class="miel-card" data-index="4"><img src="7-miel fleur 1.jpg" alt="Miel de fleurs cristallisé" loading="lazy"><h3>Fleurs cristallisé</h3></a>
+  <a href="#" class="miel-card" data-index="5"><img src="8-miel fleur 2.jpg" alt="Miel de fleurs cristallisé" loading="lazy"><h3>Fleurs cristallisé</h3></a>
+</div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" id="close">&times;</button>
+  <button class="prev" id="prev">&#10094;</button>
+  <div style="text-align:center;">
+    <img src="" alt="Miel sélectionné" id="lightbox-img" loading="lazy">
+    <div class="description" id="lightbox-desc"></div>
+    <div class="controls">
+      <div>
+        <label for="quantity">Nombre de pots :</label>
+        <input type="number" id="quantity" value="1" min="1">
+      </div>
+      <div>
+  <label for="potSize">Format du pot :</label>
+  <select id="potSize">
+    <option value="250" data-price="5">250 g - 5€</option>
+    <option value="500" data-price="10">500 g - 10€</option>
+    <option value="1000" data-price="18">1 kg - 18€</option> <!-- Nouveau format ajouté -->
+  </select>
+</div>
+    </div>
+    <div style="margin-top:10px; color:white; font-weight:bold;" id="totalPrice">Total : 5€</div>
+    <a href="#" id="addToCart" class="btn-lightbox">Ajouter au panier</a>
+  </div>
+  <button class="next" id="next">&#10095;</button>
+</div>
+
+<div id="toast">Produit ajouté au panier !</div>
+
+<footer>
+<p>&copy; 2025 La Ruche Gourmande - Tous droits réservés</p>
+</footer>
+
+<script>
+const images = [
+  {src:"3-miel de printemps 1.jpg", desc:"Miel de Printemps crémeux et onctueux, parfait pour tartines et desserts."},
+  {src:"4-miel de printemps 2.jpg", desc:"Récolte de Printemps, couleur dorée et arômes floraux délicats."},
+  {src:"5-miel d'été 1.jpg", desc:"Miel d'Été liquide et parfumé, idéal pour infusions et recettes sucrées."},
+  {src:"6-miel d'été 2.jpg", desc:"Récolte d’Été, couleur claire et douceur naturelle."},
+  {src:"7-miel fleur 1.jpg", desc:"Miel de Fleurs cristallisé, riche en arômes et naturel, parfait pour les gourmands."},
+  {src:"8-miel fleur 2.jpg", desc:"Subtil mélange de fleurs locales, texture crémeuse et couleur ambrée."}
+];
+
+let current=0;
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightbox-img');
+const lightboxDesc=document.getElementById('lightbox-desc');
+const quantityInput=document.getElementById('quantity');
+const potSizeSelect=document.getElementById('potSize');
+const addToCart=document.getElementById('addToCart');
+const toast=document.getElementById('toast');
+
+// Met à jour le badge panier
+function updateCartBadge(){
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalQty = cart.reduce((sum,item)=>sum+item.qty,0);
+  const badge = document.getElementById('cart-badge');
+  if(badge) badge.textContent = totalQty;
+}
+
+// Toast notification
+function showToast(message,bg='#27ae60'){
+  toast.textContent=message;
+  toast.style.background=bg;
+  toast.style.display='block';
+  toast.style.opacity='1';
+  setTimeout(()=>{toast.style.opacity='0'; setTimeout(()=>{toast.style.display='none';},500);},2500);
+}
+
+// Met à jour le prix total
+function updateTotal(){
+  const qty=parseInt(quantityInput.value);
+  const price=parseInt(potSizeSelect.selectedOptions[0].dataset.price);
+  document.getElementById('totalPrice').textContent=`Total : ${qty*price}€`;
+}
+
+// Ajout au panier
+function saveToCart(){
+  const cart=JSON.parse(localStorage.getItem('cart'))||[];
+  const item={
+    index: current,
+    name: images[current].desc,
+    qty: parseInt(quantityInput.value),
+    size: potSizeSelect.value,
+    price: parseInt(potSizeSelect.selectedOptions[0].dataset.price)
+  };
+  cart.push(item);
+  localStorage.setItem('cart',JSON.stringify(cart));
+  lightbox.style.display='none';
+  updateCartBadge();
+  showToast('Produit ajouté au panier !');
+}
+
+// Ouvre lightbox
+document.querySelectorAll('.miel-card').forEach(card=>{
+  card.addEventListener('click', ()=>{
+    current=parseInt(card.getAttribute('data-index'));
+    lightboxImg.src=images[current].src;
+    lightboxDesc.textContent=images[current].desc;
+    quantityInput.value=1;
+    potSizeSelect.selectedIndex=0;
+    updateTotal();
+    lightbox.style.display='flex';
+  });
+});
+
+// Navigation lightbox
+document.getElementById('close').addEventListener('click',()=>{lightbox.style.display='none';});
+document.getElementById('prev').addEventListener('click',()=>{
+  current=(current-1+images.length)%images.length;
+  lightboxImg.src=images[current].src;
+  lightboxDesc.textContent=images[current].desc;
+  updateTotal();
+});
+document.getElementById('next').addEventListener('click',()=>{
+  current=(current+1)%images.length;
+  lightboxImg.src=images[current].src;
+  lightboxDesc.textContent=images[current].desc;
+  updateTotal();
+});
+
+// Écouteurs input
+quantityInput.addEventListener('input',updateTotal);
+potSizeSelect.addEventListener('change',updateTotal);
+addToCart.addEventListener('click',saveToCart);
+
+// Initialisation
+updateCartBadge();
+</script>
+
+</body>
+</html>
+

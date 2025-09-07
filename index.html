@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Miels Artisanaux à Villerupt – La Ruche Gourmande</title>
+<meta name="description" content="Découvrez La Ruche Gourmande à Villerupt : miels 100% naturels et artisanaux, parrainage de ruches et projets éducatifs pour découvrir le monde des abeilles.">
+
+<!-- Font Awesome pour icônes officielles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-yHk3OeBJoH0bVp5Q5vOZl9M8K4UXJjp5n3Zc+f+NL4JpU+K2tBFrnq+ZpFvcWd8J3R8+1L7HgG3H6W5bIh3F0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fff8e1; color:#333; line-height:1.6; min-height:100vh; display:flex; flex-direction:column;}
+
+/* SLIDER */
+.slider {position:relative; width:80%; max-width:800px; height:400px; margin:20px auto; overflow:hidden; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); background:transparent;}
+.slider img {position:absolute; width:100%; height:100%; object-fit:cover; left:0; top:0; opacity:0; transform: scale(1.1); transition: opacity 1s ease-in-out, transform 10s ease-in-out;}
+.slider img.active {opacity:1; transform:scale(1);}
+
+header{background:#f4b41a; padding:20px; text-align:center; position:relative; z-index:1;}
+/* Logo header */
+header img {
+  height:140px;       /* hauteur desktop */
+  max-width:300px;    /* largeur max */
+  width:auto;
+  display:block;
+  margin:0 auto 10px;
+}
+
+/* Tablettes */
+@media (max-width:1024px){
+  header img {height:110px; max-width:250px;}
+}
+
+/* Mobiles */
+@media (max-width:480px){
+  header img {height:80px; max-width:200px;}
+}
+header h1{font-size:2.5rem; font-weight:900; color:white; text-shadow:1px 1px 3px rgba(0,0,0,0.3);}
+nav{margin-top:15px; display:flex; justify-content:center; flex-wrap:wrap; gap:10px;}
+nav a{color:white; text-decoration:none; font-weight:bold; font-size:1.2rem; padding:8px 15px; border-radius:8px; transition:background 0.3s, transform 0.2s;}
+nav a:hover{background:rgba(0,0,0,0.2); transform:scale(1.05);}
+.btn-commander.commander{background:#e67e22; color:white; font-weight:bold; border-radius:10px; padding:12px 25px; text-decoration:none; transition:background 0.3s, transform 0.2s;}
+.btn-commander.commander:hover{background:#cf6b19;}
+.btn-commander.panier{background:#5a3e1b; color:white; font-weight:bold; border-radius:10px; padding:12px 25px; text-decoration:none; position:relative;}
+.btn-commander.panier:hover{background:#433017;}
+
+.cart-icon{font-size:1.2rem;}
+#cart-badge{
+  background:#e74c3c;
+  color:white;
+  font-size:0.8rem;
+  font-weight:bold;
+  padding:2px 6px;
+  border-radius:50%;
+  position:absolute;
+  top:0;
+  right:0;
+  transform:translate(50%,-50%);
+}
+
+main{max-width:900px; margin:40px auto; padding:40px 20px; text-align:center; background:rgba(255,255,255,0.95); border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.1); position:relative; z-index:1; flex:1;}
+h2 {font-size:2rem; margin-bottom:20px; color:#f4b41a;}
+p {font-size:1.15rem; margin-bottom:20px; line-height:1.6;}
+ul {text-align:left; max-width:700px; margin:0 auto; font-size:1.2rem; line-height:1.6;}
+
+.btn-contact {
+  display:inline-block;
+  background-color:#5a3e1b;
+  color:white;
+  padding:12px 25px;
+  font-weight:bold;
+  border-radius:8px;
+  text-decoration:none;
+  transition:background-color 0.3s, transform 0.2s;
+}
+.btn-contact:hover {background-color:#433017; transform:translateY(-2px);}
+.btn-contact.orange {background-color:#e67e22;}
+.btn-contact.orange:hover {background-color:#cf6b19;}
+
+footer{text-align:center; padding:15px; background-color:#f4b41a; color:white; font-weight:600; margin-top:40px; position:relative; z-index:1;}
+
+@media (max-width:1024px){
+  main{max-width:95%; padding:30px 15px;}
+  nav a{font-size:1rem;}
+  header h1{font-size:2rem;}
+  .slider{width:95%; height:250px;}
+}
+@media (max-width:480px){
+  main{padding:20px 10px;}
+  nav a{padding:8px 15px; font-size:0.9rem;}
+  header h1{font-size:1.6rem;}
+  h2{font-size:1.5rem;}
+  p, ul{font-size:1rem;}
+  .slider{height:200px;}
+}
+</style>
+</head>
+<body>
+
+<!-- SLIDER -->
+<div class="slider">
+  <img src="1-abeille-sur-fleur.jpg" alt="" class="active">
+  <img src="24-moi au rucher fontoy.jpg" alt=""> 
+  <img src="14-ruche.jpg" alt="">
+  <img src="17-reine.jpg" alt="">
+  <img src="25-reine photo.jpg" alt="">
+  <img src="19-cadre couvain.jpg" alt="">
+  <img src="26-planche d'envol.jpg" alt="">
+  <img src="11-cadre-miel.jpg" alt="">
+  <img src="20-desoperculation.jpg" alt="">
+  <img src="27-extraction.jpg" alt="">
+  <img src="6-miel d'été 2.jpg" alt="">
+</div>
+
+<header>
+  <img src="28-LOGO BLANC.png" alt="Logo La Ruche Gourmande">
+  <h1>La Ruche Gourmande</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Nos Miels</a>
+    <a href="actualité.html">Actualités</a>
+    <a href="video.html">Vidéos</a>
+    <a href="contact.html">Contact</a>
+    <a href="commander.html" class="btn-commander commander"><i class="fas fa-store"></i> Commander</a>
+    <a href="commander.html" class="btn-commander panier">
+      <span class="cart-icon">🛒</span>
+      <span id="cart-badge">0</span>
+    </a>
+  </nav>
+</header>
+
+<main>
+<h2>Bienvenue sur le site de La Ruche Gourmande</h2>
+<p><strong>Des miels locaux, naturels et artisanaux, issus d’abeilles heureuses et d’un territoire préservé.</strong></p>
+
+<p>Notre rucher est situé au cœur du Pays Haut à proximité des communes de Villerupt, Crusnes, Errouville, Audun-le-Tiche. Nos abeilles butinent dans les champs, vergers et prairies pour produire des miels authentiques et savoureux. Chaque pot raconte l’histoire de notre territoire et de notre engagement pour l’environnement.</p>
+
+<h2>Nos engagements pour la biodiversité</h2>
+<p>Nous sommes un <strong>petit rucher local et artisanal</strong>, respectueux des abeilles et de la nature. Notre démarche est simple : partager notre passion avec ceux qui aiment la biodiversité, soutenir l’apiculture à taille humaine et préserver notre environnement.</p>
+
+<ul>
+  <li>🎓 <strong>Projets éducatifs</strong> pour enfants et lycées hôteliers : transmettre la passion des abeilles et sensibiliser à la biodiversité.</li>
+  <li>🐝 <strong>Parrainage de ruches</strong> et suivi personnalisé de leur évolution.</li>
+  <li>🌱 <strong>Préservation de la biodiversité locale</strong> grâce à des pratiques douces et artisanales.</li>
+</ul>
+
+<h2>Commandez du miel ou parrainez une ruche</h2>
+<p>Rejoignez notre aventure et soutenez l’apiculture locale :</p>
+<p><strong>Le parrainage d’une ruche</strong> vous permet de soutenir directement nos abeilles et notre travail. En échange, vous recevez régulièrement des nouvelles de votre ruche, des photos, et une partie du miel récolté. C’est une belle manière de contribuer à la protection des pollinisateurs et de la biodiversité, tout en partageant une expérience unique et gourmande.</p>
+
+<div style="margin-top:20px; display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+  <a href="contact.html" class="btn-contact">Parrainer une ruche / Nous écrire</a>
+  <a href="produits.html" class="btn-contact orange">Commander</a>
+</div>
+</main>
+
+<footer>
+  &copy; 2025 La Ruche Gourmande - Tous droits réservés
+</footer>
+
+<script>
+const slides = document.querySelectorAll('.slider img');
+let currentSlide = 0;
+function showSlide(index) {
+  slides.forEach(slide => {slide.classList.remove('active'); slide.style.opacity="0";});
+  slides[index].classList.add('active');
+  slides[index].style.opacity="1";
+}
+function nextSlide() {currentSlide=(currentSlide+1)%slides.length; showSlide(currentSlide);}
+setInterval(nextSlide, 5000);
+
+// Mise à jour badge panier
+function updateCartBadge(){
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalQty = cart.reduce((sum,item)=>sum+item.qty,0);
+  const badge = document.getElementById('cart-badge');
+  if(badge) badge.textContent = totalQty;
+}
+updateCartBadge();
+window.addEventListener('storage', e=>{if(e.key==='cart') updateCartBadge();});
+</script>
+
+</body>
+</html>
+
