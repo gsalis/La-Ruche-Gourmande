@@ -1,0 +1,18 @@
+# Autoriser tous les moteurs de recherche à explorer le site
+User-agent: *
+Allow: /
+
+# Bloquer les dossiers qui n’ont pas besoin d’être indexés
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Indiquer l’emplacement de la sitemap
+Sitemap: https://mielvillerupt.fr/sitemap.xml
+
+# Optimisation pour Google Images (important pour montrer tes photos de rucher et de miel)
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Bonus pour SEO local : ne pas indexer les pages doublons ou paramètres
+Disallow: /*?*
