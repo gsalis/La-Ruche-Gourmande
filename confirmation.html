@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirmation – La Ruche Gourmande</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background: #fff8e1;
+    color: #5a3e1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    background: rgba(255,255,255,0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #f4b41a;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .btn-home {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #5a3e1b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+
+  .btn-home:hover {
+    background-color: #433017;
+  }
+
+  .photo {
+    width: 250px;
+    max-height: 250px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    object-fit: cover;
+  }
+
+  .logo {
+    width: 200px;
+    margin: 20px 0 10px 0;
+    display: block;
+  }
+
+  @media (max-width:480px){
+    .container { padding: 25px 15px; }
+    h1 { font-size: 1.6rem; }
+    p { font-size: 1rem; }
+    .photo { width: 150px; max-height: 150px; }
+    .logo { width: 150px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Photo au rucher -->
+    <img src="9-moi-au-rucher.jpg" alt="Moi au rucher" class="photo">
+
+    <h1>Merci pour votre commande !</h1>
+
+    <p>Votre commande a bien été enregistrée. Vous recevrez un email ou un appel selon votre préférence de contact.</p>
+
+    <p>ℹ️ Si vous ne recevez pas de retour de notre part sous 24h, merci de nous appeler directement pour confirmer votre commande et le rendez-vous. La livraison ou le retrait de votre commande ne pourra se faire <strong>que si le rendez-vous est validé</strong>.</p>
+
+    <p>Nous vous souhaitons une très bonne dégustation et de beaux moments gourmands ! 🍯</p>
+
+    <!-- Logo centré au-dessus du bouton -->
+    <img src="28-LOGO BLANC.png" alt="La Ruche Gourmande" class="logo">
+
+    <a href="index.html" class="btn-home" id="backBtn">Retour au site</a>
+  </div>
+
+  <script>
+  // Vider le panier lorsque le client clique sur “Retour au site”
+  document.getElementById('backBtn').addEventListener('click', function() {
+      localStorage.removeItem('cart');
+  });
+  </script>
+</body>
+</html>
+
+
+
