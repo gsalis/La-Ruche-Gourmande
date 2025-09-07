@@ -2,58 +2,121 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Commande Confirmée - La Ruche Gourmande</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirmation de commande – La Ruche Gourmande</title>
 <style>
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #fff8e1;
-  color: #333;
-  text-align: center;
-  padding: 40px;
-}
-h1 {color:#f4b41a; font-size:2rem; margin-bottom:20px;}
-p {font-size:1.1rem; margin:15px 0; line-height:1.5;}
-img {max-width:300px; margin:20px 0; border-radius:12px;}
-.btn-back {
-  display:inline-block; 
-  background:#f4b41a; 
-  color:white; 
-  padding:12px 25px; 
-  border-radius:8px; 
-  font-weight:bold; 
-  text-decoration:none; 
-  margin-top:20px;
-}
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background: #fff8e1;
+    color: #5a3e1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    background: rgba(255,255,255,0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #f4b41a;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .btn-home {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #5a3e1b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .btn-home:hover {
+    background-color: #433017;
+  }
+
+  .bee-img {
+    width: 250px;
+    max-height: 250px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    object-fit: cover;
+  }
+
+  select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+  }
+
+  @media (max-width:480px){
+    .container { padding: 25px 15px; }
+    h1 { font-size: 1.6rem; }
+    p { font-size: 1rem; }
+    .bee-img { width: 150px; max-height: 150px; }
+  }
 </style>
 </head>
 <body>
+  <div class="container">
+    <img src="9-moi-au-rucher.jpg" alt="Apiculteur au rucher" class="bee-img">
+    <h1>✅ Merci pour votre commande !</h1>
+    <p>Votre commande a été enregistrée et sera préparée avec soin. 🍯</p>
 
-<h1>✅ Commande Confirmée</h1>
+    <p class="option">
+      <span class="highlight">Option :</span>
+      <span id="delivery-option">Calcul en cours...</span>
+    </p>
+    <p id="distance-message"></p>
 
-<img src="9-moi-au-rucher.jpg" alt="Photo du rucher">
+    <a href="index.html" class="btn-home">Retour à l'accueil</a>
+  </div>
 
-<p>Votre commande a été enregistrée et est désormais prioritaire pour traitement. 📦</p>
-<p id="contactInfo">Vous allez recevoir un mail ou un appel pour confirmer votre rendez-vous selon votre préférence de contact. 📩📞</p>
-<p>⚠️ Paiement sur place en espèces lors de la livraison ou du retrait.</p>
-<p>Merci pour votre confiance, votre commande sera préparée avec le plus grand soin. 🐝</p>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const distance = parseFloat(urlParams.get('distance')); 
+    const optionText = document.getElementById('delivery-option');
+    const distanceMsg = document.getElementById('distance-message');
 
-<a href="index.html" class="btn-back">Retour sur le site 🏠</a>
-
-<script>
-// Récupérer la préférence de contact depuis localStorage
-const contactPref = localStorage.getItem('contactPreference');
-const contactInfo = document.getElementById('contactInfo');
-
-if(contactPref === 'email') {
-  contactInfo.textContent = "Vous allez recevoir un mail pour confirmer votre rendez-vous. 📩";
-} else if(contactPref === 'téléphone') {
-  contactInfo.textContent = "Vous allez recevoir un appel pour confirmer votre rendez-vous. 📞";
-} else {
-  contactInfo.textContent = "Vous allez recevoir un mail ou un appel pour confirmer votre rendez-vous. 📩📞";
-}
-</script>
-
+    if (!isNaN(distance)) {
+      if(distance <= 15){
+        optionText.innerHTML = `
+          <label for="choice">Choisissez votre option :</label>
+          <select id="choice">
+            <option value="livraison">Livraison 🚚</option>
+            <option value="retrait">Retrait à La Ruche Gourmande 🐝</option>
+          </select>
+        `;
+        distanceMsg.textContent = `Vous êtes à ${distance} km de la ruche.`;
+      } else {
+        optionText.textContent = 'Retrait à La Ruche Gourmande 🐝';
+        distanceMsg.textContent = `Vous êtes à ${distance} km. La livraison n'est pas possible.`;
+      }
+    } else {
+      optionText.textContent = 'À choisir selon votre situation';
+      distanceMsg.textContent = '';
+    }
+  </script>
 </body>
 </html>
