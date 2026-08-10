@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Confirmation – La Ruche Gourmande</title>
+<link rel="canonical" href="https://mielvillerupt.fr/confirmation.html">
+<meta name="description" content="Votre commande a bien été enregistrée par La Ruche Gourmande.">
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background: #fff8e1; color: #5a3e1b; display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; text-align: center; }
+.container { background: rgba(255,255,255,0.95); padding: 40px 30px; border-radius: 15px; box-shadow: 0 6px 18px rgba(0,0,0,0.15); max-width: 600px; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 2rem; color: #f4b41a; margin-bottom: 20px; }
+p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; }
+.btn-home { display: inline-block; padding: 12px 25px; background-color: #5a3e1b; color: white; font-weight: bold; text-decoration: none; border-radius: 8px; margin-top: 20px; }
+.photo { width: 250px; max-height: 250px; margin-bottom: 20px; border-radius: 12px; box-shadow:0 4px 10px rgba(0,0,0,0.2); object-fit: cover; }
+.logo { width: 200px; margin: 20px 0 10px 0; display: block; }
+</style>
+<meta name="robots" content="noindex, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="La Ruche Gourmande">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Confirmation – La Ruche Gourmande">
+<meta property="og:description" content="Votre commande a bien été enregistrée par La Ruche Gourmande.">
+<meta property="og:url" content="https://mielvillerupt.fr/confirmation.html">
+<meta property="og:image" content="https://mielvillerupt.fr/28-LOGO BLANC.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Confirmation – La Ruche Gourmande">
+<meta name="twitter:description" content="Votre commande a bien été enregistrée par La Ruche Gourmande.">
+<meta name="twitter:image" content="https://mielvillerupt.fr/28-LOGO BLANC.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#f4b41a">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="container">
+    <img src="9-moi-au-rucher.jpg" alt="Moi au rucher" class="photo" loading="lazy">
+    <h1>Merci pour votre commande !</h1>
+    <p id="confirmMessage">Votre commande a bien été enregistrée. Vous recevrez un email ou un appel selon votre préférence de contact.</p>
+    <p id="confirmInfo">ℹ️ Si vous ne recevez pas de retour de notre part sous 24h, merci de nous appeler directement pour confirmer votre commande et le rendez-vous.</p>
+    <p>Nous vous souhaitons une très bonne dégustation et de beaux moments gourmands ! 🍯</p>
+    <img src="28-LOGO BLANC.png" alt="La Ruche Gourmande" class="logo">
+    <a href="index.html" class="btn-home" id="backBtn">Retour au site</a>
+  </div>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const isRappel = params.get('mode') === 'rappel';
+  if (isRappel) {
+    document.getElementById('confirmMessage').textContent = "Votre demande a bien été enregistrée. La Ruche Gourmande vous rappelle prochainement pour organiser votre commande.";
+    document.getElementById('confirmInfo').textContent = "ℹ️ Votre panier reste conservé en attendant notre appel — vous pourrez le compléter ou le modifier si besoin.";
+  }
+  document.getElementById('backBtn').addEventListener('click', function() {
+    // Le panier n'est vidé que si la commande a été réellement confirmée (pas en mode rappel en attente)
+    if (!isRappel) { localStorage.removeItem('cart'); }
+  });
+  </script>
+</body>
+</html>
