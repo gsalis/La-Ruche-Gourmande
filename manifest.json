@@ -1,0 +1,16 @@
+{
+  "name": "La Ruche Gourmande",
+  "short_name": "La Ruche Gourmande",
+  "description": "Miel artisanal local à Villerupt — commande par téléphone, retrait sur place ou livraison locale gratuite le samedi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fdf6e3",
+  "theme_color": "#f4b41a",
+  "lang": "fr-FR",
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "maskable" }
+  ]
+}

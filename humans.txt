@@ -1,0 +1,16 @@
+/* TEAM */
+Fondateur & apiculteur : M. Salis
+Contact : contact@mielvillerupt.fr
+Localisation : Villerupt, Meurthe-et-Moselle, France
+
+/* SITE */
+Dernière refonte : Juillet 2026
+Hébergement : GitHub Pages
+Technologies : HTML5, CSS3, JavaScript (vanilla), sans framework, sans base de données
+Langue principale : Français
+Standards : HTML sémantique, accessibilité (WCAG), données structurées Schema.org
+
+/* MERCI */
+Ce site a été conçu avec le souci de rester simple à utiliser pour tous les visiteurs,
+y compris les personnes peu habituées à Internet, tout en visant les meilleures
+pratiques actuelles de référencement, d'accessibilité et de performance.

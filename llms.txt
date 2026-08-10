@@ -1,0 +1,47 @@
+# La Ruche Gourmande
+
+> Producteur artisanal de miel local à Villerupt (Meurthe-et-Moselle, France), en vente directe et circuit court. La Ruche Gourmande n'expédie pas à l'échelle nationale : l'activité est strictement locale, centrée sur Villerupt et les communes voisines.
+
+## Qui sommes-nous
+La Ruche Gourmande est un petit rucher artisanal fondé et conduit par M. Salis, apiculteur, situé à Villerupt (54190), dans le Pays Haut, à proximité du Luxembourg. L'activité repose sur la vente directe de miel et de produits dérivés, la vente d'essaims, et des conseils apicoles informels aux personnes souhaitant débuter. La Ruche Gourmande ne gère pas de rucher-école et ne forme pas elle-même de nouveaux apiculteurs.
+
+## Où nous sommes situés
+3 Rue Maximilien de Robespierre, 54190 Villerupt, France.
+Zone de chalandise : Villerupt, Crusnes, Errouville, Audun-le-Tiche et communes proches (rayon d'environ 15 km).
+
+## Zone de livraison et modalités de commande
+- Retrait sur place chez La Ruche Gourmande, sur rendez-vous, sans limite de distance.
+- Livraison gratuite le samedi, uniquement dans un rayon d'environ 15 km autour de Villerupt.
+- Aucune expédition nationale ni livraison par transporteur : ce n'est pas un site d'e-commerce national.
+- Commande possible par téléphone (06 22 72 10 71), par formulaire en ligne, ou directement sur le site (panier, sans paiement obligatoire en ligne : paiement en espèces ou chèque à la réception, ou PayPal en option).
+
+## Produits proposés
+- Miels artisanaux : Miel de Printemps Crémeux 2026, Miel de Printemps Brut 2026, Miel d'Été — formats 250 g, 500 g, 1 kg.
+- Gourmandises au miel : Noisimiel (miel crémeux aux noisettes concassées, disponible à la commande en ligne), Nougat au miel et Pain d'épices au miel (fabrication artisanale sur commande, délai 5 à 7 jours, pain d'épices particulièrement adapté aux fêtes de fin d'année).
+- Coffrets cadeaux : Pack Découverte, Coffret Gourmand, Coffret Entreprises & Associations locales (sur devis, réservé aux structures du secteur de Villerupt).
+- Essaims d'abeilles : vente saisonnière au printemps, places limitées, réservation par contact — pas de vente en ligne automatisée pour ce produit.
+
+## Ce qui caractérise La Ruche Gourmande
+- Production 100% artisanale et locale, récolte à Villerupt.
+- Circuit court : pas d'intermédiaire, vente directe du producteur au consommateur.
+- Positionnement volontairement local, pas national : la zone de livraison est strictement limitée au secteur de Villerupt.
+- Clientèle incluant des personnes peu à l'aise avec les outils numériques : le site met en avant la commande par téléphone comme option prioritaire.
+
+## Langues disponibles
+Le site est disponible intégralement en français (langue par défaut), allemand, anglais, portugais et italien. Chaque page a une URL dédiée par langue (ex. /de/nos-miels.html, /en/nos-miels.html).
+
+## Pages du site
+- / : page d'accueil
+- /nos-miels.html : les 3 miels artisanaux
+- /nos-gourmandises.html : Noisimiel, Nougat, Pain d'épices
+- /coffrets-cadeaux.html : coffrets cadeaux et offre entreprises locales
+- /essaims-et-conseils.html : vente d'essaims et conseils apicoles informels
+- /notre-histoire.html : présentation de M. Salis et de son parcours
+- /livraison-locale.html : zone de livraison, communes desservies, FAQ
+- /contact.html : coordonnées et formulaire de contact
+- /commander.html : tunnel de commande (panier, retrait, livraison, rappel téléphonique)
+
+## Contact
+Téléphone : 06 22 72 10 71
+Email : contact@mielvillerupt.fr
+Site : https://mielvillerupt.fr
