@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Order – La Ruche Gourmande</title>
+<link rel="canonical" href="https://mielvillerupt.fr/en/commander.html">
+<link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/commander.html">
+<link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/commander.html">
+<link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/commander.html">
+<link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/commander.html">
+<link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/commander.html">
+<link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/commander.html">
+<meta name="description" content="Order your local honey: pickup at La Ruche Gourmande, free delivery on Saturdays in the Villerupt area, or a callback by phone.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-yHk3OeBJoH0bVp5Q5vOZl9M8K4UXJjp5n3Zc+f+NL4JpU+K2tBFrnq+ZpFvcWd8J3R8+1L7HgG3H6W5bIh3F0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.tunnel-steps { display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:30px; }
+.tunnel-step { background:var(--white); border:2px solid var(--amber); color:var(--brown); font-weight:700; font-size:.9rem; padding:8px 16px; border-radius:20px; }
+.tunnel-step.active { background:var(--amber); color:#fff; }
+
+table.cart-table { width:100%; border-collapse:collapse; margin-top:10px; background:var(--white); border-radius:var(--radius-md); overflow:hidden; box-shadow:0 4px 12px var(--shadow); }
+table.cart-table th, table.cart-table td { border-bottom:1px solid #eee; padding:12px; text-align:center; }
+table.cart-table th { background:var(--amber); color:#fff; }
+table.cart-table tfoot td { font-weight:700; }
+
+.reception-choices { display:flex; gap:16px; flex-wrap:wrap; margin: 20px 0; }
+.reception-option {
+  flex:1; min-width:220px; background:var(--white); border:2px solid var(--amber); border-radius:var(--radius-md);
+  padding:20px; cursor:pointer; transition: all .2s; text-align:center;
+}
+.reception-option.selected { background: rgba(244,180,26,.15); border-color:var(--gold-text); box-shadow:0 4px 14px var(--shadow); }
+.reception-option i { font-size:1.6rem; color:var(--gold-text); margin-bottom:8px; display:block; }
+.reception-option h3 { font-size:1rem; margin-bottom:4px; color:var(--brown); font-family:'Inter',sans-serif; }
+.reception-option p { font-size:.85rem; color:#6b5031; }
+
+form.order-form { margin-top:24px; background:var(--white); padding:24px; border-radius:var(--radius-md); box-shadow:0 4px 16px var(--shadow); }
+form.order-form label { font-weight:700; display:block; margin-top:12px; }
+form.order-form input, form.order-form textarea, form.order-form select { width:100%; padding:11px; margin-top:6px; border-radius:8px; border:1px solid #ddd; font-family:'Inter',sans-serif; font-size:1rem; }
+#map { width:100%; height:300px; margin-top:16px; border-radius:var(--radius-md); }
+.btn-clear { background:#e74c3c; color:#fff; border:none; padding:10px 20px; border-radius:8px; font-weight:700; cursor:pointer; margin-top:14px; }
+.btn-checkout { background:var(--success); color:#fff; border:none; padding:15px 26px; border-radius:10px; font-weight:700; cursor:pointer; font-size:1.05rem; margin-top:16px; width:100%; }
+#paypal-button-container { margin-top:15px; }
+#paypalInfo { font-size:.9rem; color:#555; margin-top:10px; background:#fff3cd; border:1px solid #ffeeba; border-radius:6px; padding:10px; }
+.hidden { display:none !important; }
+</style>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="La Ruche Gourmande">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Order – La Ruche Gourmande">
+<meta property="og:description" content="Order your local honey: pickup at La Ruche Gourmande, free delivery on Saturdays in the Villerupt area, or a callback by phone.">
+<meta property="og:url" content="https://mielvillerupt.fr/en/commander.html">
+<meta property="og:image" content="https://mielvillerupt.fr/11-cadre-miel.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Order – La Ruche Gourmande">
+<meta name="twitter:description" content="Order your local honey: pickup at La Ruche Gourmande, free delivery on Saturdays in the Villerupt area, or a callback by phone.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mielvillerupt.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Order", "item": "https://mielvillerupt.fr/en/commander.html" }
+  ]
+}
+</script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#f4b41a">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="top-bar">
+  📞 <a href="tel:+33622721071">06 22 72 10 71</a> — Order by phone available · Free delivery on Saturdays (Villerupt area)
+</div>
+
+<header class="site-header">
+  <img src="../28-LOGO BLANC.png" alt="La Ruche Gourmande logo" class="logo">
+  <span class="brand-name">La Ruche Gourmande</span>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="nos-miels.html">Our Honeys</a>
+    <a href="nos-gourmandises.html">Treats</a>
+    <a href="coffrets-cadeaux.html">Gift Boxes</a>
+    <a href="essaims-et-conseils.html">Bee Swarms</a>
+    <a href="notre-histoire.html">Our Story</a>
+    <a href="livraison-locale.html">Delivery</a>
+    <a href="actualites.html">News</a>
+    <a href="videos.html">Videos</a>
+    <a href="contact.html">Contact</a>
+    <a href="commander.html" class="btn-commander"><i class="fas fa-store"></i> Order</a>
+    <a href="commander.html" class="btn-panier">🛒 <span id="cart-badge">0</span></a>
+    <span id="lang-switcher"></span>
+  </nav>
+</header>
+
+<main id="main-content">
+<section class="section">
+
+  <div class="tunnel-steps">
+    <span class="tunnel-step active">1. Your cart</span>
+    <span class="tunnel-step active">2. Pickup or delivery</span>
+    <span class="tunnel-step active">3. Your details</span>
+  </div>
+
+  <h1 class="section-title" style="font-size:1.6rem;">Your Cart</h1>
+  <div style="overflow-x:auto;">
+  <table id="cartTable" class="cart-table" style="min-width:520px;">
+    <thead><tr><th>Product</th><th>Size</th><th>Quantity</th><th>Unit price</th><th>Total</th><th></th></tr></thead>
+    <tbody></tbody>
+    <tfoot><tr><td colspan="4">Grand total</td><td id="grandTotal">0€</td><td></td></tr></tfoot>
+  </table>
+  </div>
+  <button class="btn-clear" id="clearCart">Clear cart</button>
+
+  <h2 class="section-title" style="font-size:1.5rem; margin-top:40px;">How would you like to receive your order?</h2>
+  <div class="reception-choices">
+    <div class="reception-option selected" data-mode="retrait">
+      <i class="fas fa-house"></i>
+      <h3>I'll pick up my order</h3>
+      <p>At La Ruche Gourmande, by appointment</p>
+    </div>
+    <div class="reception-option" data-mode="livraison">
+      <i class="fas fa-truck"></i>
+      <h3>Free delivery on Saturdays</h3>
+      <p>Only in the Villerupt area</p>
+    </div>
+    <div class="reception-option" data-mode="rappel">
+      <i class="fas fa-phone"></i>
+      <h3>I'd rather be called back</h3>
+      <p>No form to fill in, we'll arrange everything by phone</p>
+    </div>
+  </div>
+
+  <form id="orderForm" class="order-form" action="https://formspree.io/f/xyzdzwwj" method="POST" novalidate>
+    <input type="hidden" name="ModeReception" id="modeReceptionField" value="retrait">
+
+    <label>First name:</label>
+    <input type="text" name="Prénom" id="fname" required />
+    <label>Last name:</label>
+    <input type="text" name="Nom" id="lname" required />
+    <label>Phone:</label>
+    <input type="tel" name="Téléphone" id="phone" required />
+    <label>Email (optional):</label>
+    <input type="email" name="Email" id="email" />
+
+    <div id="adresseBlock" class="hidden">
+      <label>Full address:</label>
+      <input type="text" name="Adresse" id="address" placeholder="E.g.: 12 Rue des Abeilles, Villerupt" />
+      <p id="deliveryStatus" style="font-size:.9rem; color:#555; margin-top:6px;"></p>
+    </div>
+
+    <label>Additional notes (optional):</label>
+    <textarea name="Compléments" id="details" rows="3"></textarea>
+
+    <label>Payment method:</label>
+    <select name="PaymentMethod" id="paymentMethod" required>
+      <option value="">-- Please choose --</option>
+      <option value="reception">Cash or cheque on pickup/delivery</option>
+      <option value="paypal">Online payment (PayPal)</option>
+    </select>
+    <p id="paypalInfo" style="display:none;">⚠️ Online payment via PayPal adds transaction fees (about 2.9% + €0.35) to the total.</p>
+
+    <input type="hidden" name="Panier" id="cartData" />
+    <button type="submit" class="btn-checkout" id="submitOrderBtn" style="display:none;">Place order</button>
+  </form>
+  <div id="paypal-button-container" style="display:none;"></div>
+
+  <form id="rappelForm" class="order-form hidden" action="https://formspree.io/f/xyzdzwwj" method="POST" novalidate>
+    <p style="margin-bottom:10px;">Leave us your name and phone number, La Ruche Gourmande will call you back to arrange your order.</p>
+    <label>First name:</label>
+    <input type="text" name="Prénom" id="rf-fname" required />
+    <label>Last name:</label>
+    <input type="text" name="Nom" id="rf-lname" required />
+    <label>Phone:</label>
+    <input type="tel" name="Téléphone" id="rf-phone" required />
+    <input type="hidden" name="ModeReception" value="rappel">
+    <input type="hidden" name="Panier" id="rf-cartData" />
+    <button type="submit" class="btn-checkout"><i class="fas fa-phone"></i> Request a callback</button>
+  </form>
+
+  <div id="mapWrap" class="hidden">
+    <h2 class="section-title" style="font-size:1.3rem; margin-top:30px;">Our delivery area</h2>
+    <div id="map"></div>
+  </div>
+
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025–2026 La Ruche Gourmande · 3 Rue Maximilien de Robespierre, F-54190 Villerupt · <a href="tel:+33622721071">06 22 72 10 71</a></p>
+</footer>
+<a href="tel:+33622721071" class="mobile-call-bar"><i class="fas fa-phone"></i> Call to order</a>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AVOuGR4lIpZHx31FOq9QgyAL-XozrTtpsGvUaN-nitxJpLkkUa-8oxnivbiZO-WbN9jRSvQcbO47cCVD&currency=EUR"></script>
+<script src="../assets/js/i18n-strings.js"></script>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/lang-switcher.js"></script>
+<script>
+// --- Panier (logique identique à l'existant : clé localStorage 'cart', items {name,qty,size,price}) ---
+function loadCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const tbody = document.querySelector('#cartTable tbody');
+  tbody.innerHTML = '';
+  let grandTotal = 0;
+  cart.forEach((item, index) => {
+    const total = item.qty * item.price;
+    grandTotal += total;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${item.name}</td><td>${item.size ? item.size + ' g' : '—'}</td><td>${item.qty}</td><td>${item.price}€</td><td>${total}€</td><td><button type="button" onclick="removeItem(${index})">❌</button></td>`;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('grandTotal').textContent = grandTotal + '€';
+  document.getElementById('cartData').value = JSON.stringify(cart);
+  document.getElementById('rf-cartData').value = JSON.stringify(cart);
+  return {cart, grandTotal};
+}
+function removeItem(index){
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index,1);
+  localStorage.setItem('cart',JSON.stringify(cart));
+  loadCart();
+  updateCartBadge();
+}
+document.getElementById('clearCart').addEventListener('click', ()=>{
+  localStorage.removeItem('cart');
+  loadCart();
+  updateCartBadge();
+});
+loadCart();
+
+// --- Mode de réception (retrait / livraison / rappel) ---
+const rucheCoords = { lat: 49.4604210515537, lon: 5.937996326094758 };
+const maxDistanceKm = 15;
+let map = null;
+let currentMode = 'retrait';
+
+const receptionOptions = document.querySelectorAll('.reception-option');
+const orderForm = document.getElementById('orderForm');
+const rappelForm = document.getElementById('rappelForm');
+const adresseBlock = document.getElementById('adresseBlock');
+const mapWrap = document.getElementById('mapWrap');
+const addressInput = document.getElementById('address');
+const deliveryStatus = document.getElementById('deliveryStatus');
+
+function setMode(mode) {
+  currentMode = mode;
+  receptionOptions.forEach(o => o.classList.toggle('selected', o.dataset.mode === mode));
+  document.getElementById('modeReceptionField').value = mode;
+
+  if (mode === 'rappel') {
+    orderForm.classList.add('hidden');
+    rappelForm.classList.remove('hidden');
+    mapWrap.classList.add('hidden');
+    document.getElementById('paypal-button-container').style.display = 'none';
+  } else {
+    orderForm.classList.remove('hidden');
+    rappelForm.classList.add('hidden');
+    if (mode === 'livraison') {
+      adresseBlock.classList.remove('hidden');
+      addressInput.required = true;
+      mapWrap.classList.remove('hidden');
+      initMapIfNeeded();
+    } else {
+      adresseBlock.classList.add('hidden');
+      addressInput.required = false;
+      mapWrap.classList.add('hidden');
+    }
+  }
+  updateButtons();
+}
+receptionOptions.forEach(opt => opt.addEventListener('click', () => setMode(opt.dataset.mode)));
+
+function initMapIfNeeded() {
+  if (map) return;
+  map = L.map('map').setView([rucheCoords.lat, rucheCoords.lon], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'© OpenStreetMap'}).addTo(map);
+  L.circle([rucheCoords.lat, rucheCoords.lon], { radius: maxDistanceKm*1000, color:'green', fillColor:'green', fillOpacity:0.2 }).addTo(map).bindPopup("Free delivery zone (Saturdays)").openPopup();
+  L.marker([rucheCoords.lat, rucheCoords.lon]).addTo(map).bindPopup('La Ruche Gourmande');
+}
+
+// --- Vérification d'adresse (logique existante conservée) ---
+async function getCoordsFromAddress(address){
+  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    if(data && data.length > 0){ return { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon) }; }
+  } catch(e){ console.error("Erreur API Nominatim :", e); }
+  return null;
+}
+function haversineDistance(lat1, lon1, lat2, lon2){
+  const R = 6371;
+  const dLat = (lat2-lat1)*Math.PI/180;
+  const dLon = (lon2-lon1)*Math.PI/180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+  const c = 2*Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R*c;
+}
+let addrTimeout = null;
+addressInput.addEventListener('input', ()=>{
+  clearTimeout(addrTimeout);
+  deliveryStatus.textContent = t().checkingDelivery;
+  deliveryStatus.style.color = "#555";
+  addrTimeout = setTimeout(async () => {
+    const address = addressInput.value.trim();
+    if(address === "") { deliveryStatus.textContent = ""; updateButtons(); return; }
+    const coords = await getCoordsFromAddress(address);
+    if(!coords){ deliveryStatus.textContent = t().addressUnverifiable; deliveryStatus.style.color = "orange"; updateButtons(); return; }
+    const distance = haversineDistance(coords.lat, coords.lon, rucheCoords.lat, rucheCoords.lon);
+    if(distance <= maxDistanceKm){
+      deliveryStatus.textContent = t().inZone(distance.toFixed(1));
+      deliveryStatus.style.color = "green";
+    } else {
+      deliveryStatus.textContent = t().outZone(distance.toFixed(1));
+      deliveryStatus.style.color = "#c9683a";
+    }
+    updateButtons();
+  }, 700);
+});
+
+// --- Paiement / validation ---
+const paypalContainer = document.getElementById('paypal-button-container');
+const submitOrderBtn = document.getElementById('submitOrderBtn');
+const paymentMethodSelect = document.getElementById('paymentMethod');
+const paypalInfo = document.getElementById('paypalInfo');
+
+function isFormValid(){
+  if(!orderForm.checkValidity()) return false;
+  if (currentMode === 'livraison' && addressInput.value.trim() === '') return false;
+  return true;
+}
+function updateButtons() {
+  const {cart} = loadCart();
+  const paymentMethod = paymentMethodSelect.value;
+  if (currentMode === 'rappel') return;
+  if(cart.length === 0){ paypalContainer.style.display = 'none'; submitOrderBtn.style.display = 'none'; paypalInfo.style.display = 'none'; return; }
+  if(paymentMethod === 'paypal'){
+    paypalInfo.style.display = 'block';
+    paypalContainer.style.display = isFormValid() ? 'block' : 'none';
+    submitOrderBtn.style.display = 'none';
+  } else if(paymentMethod === 'reception'){
+    paypalInfo.style.display = 'none';
+    paypalContainer.style.display = 'none';
+    submitOrderBtn.style.display = 'inline-block';
+  } else {
+    paypalInfo.style.display = 'none'; paypalContainer.style.display = 'none'; submitOrderBtn.style.display = 'none';
+  }
+}
+paymentMethodSelect.addEventListener('change', updateButtons);
+orderForm.addEventListener('input', updateButtons);
+
+function calculatePaypalFees(amount) { return amount * 0.029 + 0.35; }
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    const {cart, grandTotal} = loadCart();
+    const fees = calculatePaypalFees(grandTotal);
+    const totalWithFees = (grandTotal + fees).toFixed(2);
+    return actions.order.create({ purchase_units: [{ amount: { value: totalWithFees }, description: "Commande La Ruche Gourmande" }], application_context: { shipping_preference: 'NO_SHIPPING' } });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      const formData = new FormData(orderForm);
+      formData.append('PayPalOrderID', details.id);
+      formData.append('PayPalPayer', details.payer.email_address);
+      fetch(orderForm.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } }).then(response => {
+        if(response.ok){ localStorage.removeItem('cart'); loadCart(); orderForm.reset(); window.location.href = "confirmation.html"; }
+        else { alert(t().orderError); }
+      });
+    });
+  },
+  onError: function(err){ alert(t().paypalError + err); }
+}).render('#paypal-button-container');
+
+orderForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const {cart} = loadCart();
+  if (cart.length === 0) { alert(t().cartEmpty); return; }
+  if(paymentMethodSelect.value === ''){ alert(t().choosePayment); return; }
+  if (currentMode === 'livraison' && addressInput.value.trim() === '') { alert(t().giveAddress); return; }
+  fetch(orderForm.action, { method: 'POST', body: new FormData(orderForm), headers: { 'Accept': 'application/json' } }).then(response => {
+    if(response.ok){ localStorage.removeItem('cart'); loadCart(); orderForm.reset(); window.location.href = "confirmation.html"; }
+    else { alert(t().orderError); }
+  });
+});
+
+rappelForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const {cart} = loadCart();
+  if (cart.length === 0) { alert(t().cartEmpty); return; }
+  fetch(rappelForm.action, { method: 'POST', body: new FormData(rappelForm), headers: { 'Accept': 'application/json' } }).then(response => {
+    if(response.ok){ rappelForm.reset(); window.location.href = "confirmation.html?mode=rappel"; }
+    else { alert(t().requestError); }
+  });
+});
+
+setMode('retrait');
+</script>
+</body>
+
+</body>
+</html>
