@@ -1,39 +1,664 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mielvillerupt.fr/</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/"/>
   </url>
   <url>
-    <loc>https://mielvillerupt.fr/produits.html</loc>
-    <lastmod>2025-09-07</lastmod>
+    <loc>https://mielvillerupt.fr/de/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/nos-miels.html</loc>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-miels.html"/>
   </url>
   <url>
-    <loc>https://mielvillerupt.fr/actualité.html</loc>
-    <lastmod>2025-09-07</lastmod>
+    <loc>https://mielvillerupt.fr/de/nos-miels.html</loc>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-miels.html"/>
   </url>
   <url>
-    <loc>https://mielvillerupt.fr/video.html</loc>
-    <lastmod>2025-09-07</lastmod>
+    <loc>https://mielvillerupt.fr/en/nos-miels.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-miels.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/nos-miels.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-miels.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/nos-miels.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-miels.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-miels.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/nos-gourmandises.html</loc>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/nos-gourmandises.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/nos-gourmandises.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/nos-gourmandises.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/nos-gourmandises.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/nos-gourmandises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/nos-gourmandises.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/coffrets-cadeaux.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/coffrets-cadeaux.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/coffrets-cadeaux.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/coffrets-cadeaux.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/coffrets-cadeaux.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/coffrets-cadeaux.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/coffrets-cadeaux.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/essaims-et-conseils.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/essaims-et-conseils.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/essaims-et-conseils.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/essaims-et-conseils.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/essaims-et-conseils.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/essaims-et-conseils.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/essaims-et-conseils.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/notre-histoire.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/notre-histoire.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/notre-histoire.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/notre-histoire.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/notre-histoire.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/notre-histoire.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/notre-histoire.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/notre-histoire.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/notre-histoire.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/notre-histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/notre-histoire.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/livraison-locale.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/livraison-locale.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/livraison-locale.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/livraison-locale.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/livraison-locale.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/livraison-locale.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/livraison-locale.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/livraison-locale.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/livraison-locale.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/livraison-locale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/livraison-locale.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/actualites.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/actualites.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/actualites.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/actualites.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/actualites.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/actualites.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/actualites.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/actualites.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/actualites.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/actualites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/actualites.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/videos.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/videos.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/videos.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/videos.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/videos.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/videos.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/videos.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/videos.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/videos.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/videos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/videos.html"/>
   </url>
   <url>
     <loc>https://mielvillerupt.fr/contact.html</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/contact.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/contact.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/contact.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/contact.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/contact.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/contact.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/contact.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/contact.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/contact.html"/>
   </url>
   <url>
     <loc>https://mielvillerupt.fr/commander.html</loc>
-    <lastmod>2025-09-07</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/commander.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/de/commander.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/commander.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/en/commander.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/commander.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/pt/commander.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/commander.html"/>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/it/commander.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mielvillerupt.fr/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mielvillerupt.fr/de/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mielvillerupt.fr/en/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mielvillerupt.fr/pt/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mielvillerupt.fr/it/commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mielvillerupt.fr/commander.html"/>
   </url>
 </urlset>

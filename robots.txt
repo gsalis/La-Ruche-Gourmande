@@ -1,0 +1,16 @@
+# La Ruche Gourmande — robots.txt
+User-agent: *
+Allow: /
+
+# Pages utilitaires à ne pas indexer (post-commande, remerciement de formulaire)
+Disallow: /confirmation.html
+Disallow: /merci.html
+
+# Ne pas indexer les paramètres d'URL (évite le contenu dupliqué)
+Disallow: /*?*
+
+Sitemap: https://mielvillerupt.fr/sitemap.xml
+Sitemap: https://mielvillerupt.fr/sitemap-images.xml
+
+# Fichier de contexte pour les IA (convention émergente llms.txt)
+# https://mielvillerupt.fr/llms.txt

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mielvillerupt.fr/</loc>
+    <image:image><image:loc>https://mielvillerupt.fr/1-abeille-sur-fleur.jpg</image:loc><image:title>Abeille sur une fleur à Villerupt</image:title></image:image>
+    <image:image><image:loc>https://mielvillerupt.fr/9-moi-au-rucher.jpg</image:loc><image:title>M. Salis au rucher, La Ruche Gourmande</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/nos-miels.html</loc>
+    <image:image><image:loc>https://mielvillerupt.fr/32-crémeux_2026.png</image:loc><image:title>Miel de Printemps Crémeux 2026</image:title></image:image>
+    <image:image><image:loc>https://mielvillerupt.fr/33-brut_2026.png</image:loc><image:title>Miel de Printemps Brut 2026</image:title></image:image>
+    <image:image><image:loc>https://mielvillerupt.fr/6-miel%20d'%C3%A9t%C3%A9%202.jpg</image:loc><image:title>Miel d'Été de La Ruche Gourmande</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/nos-gourmandises.html</loc>
+    <image:image><image:loc>https://mielvillerupt.fr/11-cadre-miel.jpg</image:loc><image:title>Noisimiel, miel crémeux aux noisettes</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/livraison-locale.html</loc>
+    <image:image><image:loc>https://mielvillerupt.fr/14-ruche.jpg</image:loc><image:title>Zone de livraison La Ruche Gourmande autour de Villerupt</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://mielvillerupt.fr/notre-histoire.html</loc>
+    <image:image><image:loc>https://mielvillerupt.fr/9-moi-au-rucher.jpg</image:loc><image:title>M. Salis, apiculteur de La Ruche Gourmande</image:title></image:image>
+  </url>
+</urlset>
